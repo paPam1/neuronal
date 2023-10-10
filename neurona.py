@@ -8,7 +8,7 @@ class neuro:
         self.bia_so = np.ones((2, 1))  # Bias salida
         self.bia_hi = np.ones((3, 1))  # Bias oculta
         self.weight_hi_en = np.ones((3, 2))  # Pesos entrada oculta
-        self.weight_hi_so = np.ones((2, 3))  # Pesos oculta asalida
+        self.weight_hi_so = np.ones((2, 3))  # Pesos oculta salida
 
 
     def sigmoid(self, x):
