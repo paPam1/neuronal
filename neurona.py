@@ -33,3 +33,4 @@ if __name__ == '__main__':
     salida = functn.feedforward(info)
 
     print("Sortida :", salida)
+
