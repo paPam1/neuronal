@@ -2,7 +2,7 @@ import numpy as np
 
 
 class Xarxa:
-    def __init__(self, learning_rate=0.5):
+    def __init__(self, learning_rate=0.25):
         self.learning_rate = learning_rate
 
         self.pes_oc_ent = np.random.rand(3,2) * 0.1  # valores generados por funcion np están entre [0,1]; capa oculta  3 nodos y la capa entrada  2 nodos
@@ -56,7 +56,7 @@ class Xarxa:
 
 
 if __name__ == '__main__':
-    xarxa = Xarxa(learning_rate=1.0)  # Aumentamos la tasa de aprendizaje
+    xarxa = Xarxa()  # Aumentamos la tasa de aprendizaje
 
     # Salida deseada
     valor_deseado = np.array([[0], [1]])
