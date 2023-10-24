@@ -66,5 +66,5 @@ if __name__ == '__main__':
     # Entreno la red
     xarxa.entreno_red(entradas, valor_deseado, veces=5000)  # Aumentamos el número de veces
 
-    print(" ", xarxa.salida[0])  # salida 0
-    print(" ", xarxa.salida[1])  # salida 1
+    print(" ",xarxa.salida[0])  # salida 0
+    print(" ", xarxa.salida[1]) # salida 1
