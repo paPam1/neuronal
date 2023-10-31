@@ -67,5 +67,5 @@ if __name__ == '__main__':
     xarxa.entreno_red(entradas, valor_deseado, veces=5000)  # Aumentamos el número de veces
 
     #printear valores
-    print(" ",xarxa.salida[0])
-    print(" ", xarxa.salida[1])
+    print("XOR ",xarxa.salida[0])
+    print("AND ", xarxa.salida[1])
