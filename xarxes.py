@@ -5,21 +5,17 @@ class Xarxa:
     def __init__(self, learning_rate=0.25):
         self.learning_rate = learning_rate
 
-        self.pes_oc_ent = np.random.rand(3,2) * 0.1  # valores generados por funcion np están entre [0,1]; capa oculta  3 nodos y la capa entrada  2 nodos
-        self.pesos_sort_oc = np.random.rand(2, 3) * 0.1  # capa  salida 2 nodos y capa oculta 3 nodos ;
+        self.pes_oc_ent = np.random.rand(3,2) # valores generados por funcion np están entre [0,1]; capa oculta  3 nodos y la capa entrada  2 nodos
+        self.pesos_sort_oc = np.random.rand(2, 3) # capa  salida 2 nodos y capa oculta 3 nodos ;
 
         self.bia_oc = np.ones((3, 1))
         self.bia_sort = np.ones((2, 1))
 
-    def sigmoid_d(self, x):  # calculamos gradiente
+    def sigmoid_d(self, x):  # calculamos derivada
         return x * (1 - x)
 
     def sigmoid(self, x):
         return 1 / (1 + np.exp(-x))
-
-    def error_calcul(self, salida, y):
-        error = salida - y
-        return error
 
     def backward_propagation(self, entradas, valor_deseado):
         # calculo de deltas para la capa de salida
@@ -49,7 +45,7 @@ class Xarxa:
             self.salida = self.sigmoid(np.dot(self.pesos_sort_oc, self.activacion_oculta) + self.bia_sort)
 
             # calculo error
-            error_c = self.error_calcul(self.salida, valor_deseado)  # lo que obtenemos - lo que queremos
+            error_c =self.salida - valor_deseado # lo que obtenemos - lo que queremos
 
             # propagacion
             self.backward_propagation(entradas, valor_deseado)
@@ -64,7 +60,7 @@ if __name__ == '__main__':
     # Entradas [0, 1]
     entradas = np.array([0, 1]).reshape((2, 1))
     # Entreno la red
-    xarxa.entreno_red(entradas, valor_deseado, veces=5000)  # Aumentamos el número de veces
+    xarxa.entreno_red(entradas, valor_deseado, veces=5000)  # hacemos 5000 iteraciones de entreno
 
     print(" ",xarxa.salida[0])  # salida 0
     print(" ", xarxa.salida[1]) # salida 1
