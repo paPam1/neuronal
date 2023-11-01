@@ -7,7 +7,7 @@ class Xarxa:
         self.pes_oc_ent = np.random.rand(3,2)  # valores generados por funcion np están entre [0,1]; capa oculta  3 nodos y la capa entrada  2 nodos
         self.pesos_sort_oc = np.random.rand(2, 3)   # capa  salida 2 nodos y capa oculta 3 nodos ;
 
-        self.bia_oc = np.ones((3, 1))
+        self.bia_oc = np.ones((3, 1)) #iniciamos bias
         self.bia_sort = np.ones((2, 1))
 
     def sigmoid_d(self, x):  #derivada
