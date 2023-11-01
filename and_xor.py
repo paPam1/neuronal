@@ -60,7 +60,7 @@ if __name__ == '__main__':
     valor_deseado = np.array([[0,0],[1,0],[1,0],[0,1]])
 
   # Entreno la red
-    xarxa.entreno_red(entradas, valor_deseado, veces=5000)  # Aumentamos el número de veces
+    xarxa.entreno_red(entradas, valor_deseado, veces=5000)  # queremos 5000 iteraciones de entreno
 
     #printear valores
     print("XOR ",xarxa.salida[0])
