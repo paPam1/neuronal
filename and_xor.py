@@ -28,7 +28,7 @@ class Xarxa:
         self.bia_sort = self.bia_sort - self.learning_rate * delta_b_salida
 
         # calculo de deltas para la capa oculta ; .T es traspuesta acuerdate!
-        delta_z_oculta = np.dot(self.pesos_sort_oc.T, delta_z_salida) * self.sigmoid_d(self.activacion_oculta)  # np.dot producto
+        delta_z_oculta = np.dot(self.pesos_sort_oc.T, delta_z_salida) * self.sigmoid_d(self.activacion_oculta)  # np.dot producte
         delta_a_oculta = delta_z_oculta
 
         # actualizamos pesos y bias para la capa oculta
