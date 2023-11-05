@@ -27,7 +27,7 @@ class neuro:
 
 if __name__ == '__main__':
     functn = neuro()
-
+    #reshapeo para tener la dimension deseada
     info = np.array([0, 1]).reshape((2, 1))
 
     salida = functn.feedforward(info)
